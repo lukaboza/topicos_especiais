@@ -12,12 +12,13 @@ services:
         VARIANT: "3.10"
         # Optional Node.js version to install
         NODE_VERSION: "14"
-
+    ports:
+      - "8000:8000"
     volumes:
       - ..:/workspace:cached
 
     # Overrides default command so things don't shut down after the process ends.
-    command: sleep infinity
+    command: python manage.py runserver
 
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
     network_mode: service:db
@@ -32,6 +33,8 @@ services:
     restart: unless-stopped
     volumes:
       - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
