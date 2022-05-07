@@ -1,0 +1,19 @@
+.miolo{
+    height: 100%;
+    border-style: double;
+    border-width: 100px;
+    box-sizing: border-box;
+    border-image: url('www.png')  120 round;
+    text-align: center;
+
+}
+
+.container{
+    width: 1440px;
+    height: 960px;
+    background-color: #f2eecb;
+    padding: 20px;
+    box-sizing: content-box;
+
+}
+
