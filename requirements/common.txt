@@ -1,0 +1,4 @@
+Django==4.0.4
+django-ninja==0.17.0
+psycopg2-binary==2.9.3
+django-environ==0.8.1
