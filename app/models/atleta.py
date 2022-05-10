@@ -7,11 +7,11 @@ class Atleta(models.Model):
         db_table = 'atletas'
 
     SEXOS = (
-        ('m', 'masculino'),
+        ('m', 'Masculino'),
         ('f', 'Feminino'),
     )
 
-    responsavel_atleta = models.ForeignKey(Federacao, on_delete=models.CASCADE)
+    federacao = models.ForeignKey(Federacao, on_delete=models.CASCADE)
     responsavel_atleta = models.ForeignKey(ResponsavelAtleta, on_delete=models.CASCADE, null=True)
     codigo = models.CharField(max_length=100, db_index=True)
     nome = models.CharField(max_length=255)
