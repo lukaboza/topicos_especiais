@@ -1,19 +1,25 @@
 .miolo{
     height: 100%;
     border-style: double;
-    border-width: 100px;
+    border-width: 20px;
     box-sizing: border-box;
-    border-image: url('www.png')  120 round;
+    border-image: url('border.png')  30 round;
     text-align: center;
 
+}
+
+.alvara{
+    font-size: 75px;
 }
 
 .container{
     width: 1440px;
     height: 960px;
-    background-color: #f2eecb;
+    background-color: #f1e9be;
     padding: 20px;
     box-sizing: content-box;
 
 }
+
+
 
