@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;400&display=swap%27');
+
+body{
+    font-family: 'Martel', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p{
+    margin: 0;
+    font-size: 20px;
+}
+
+.div-assinatura{
+    padding:35px
+}
+
 .miolo{
     height: 100%;
     border-style: double;
@@ -9,12 +26,15 @@
 }
 
 .alvara{
-    font-size: 75px;
+    margin: 0;
+    font-size: 100px;
+    font-family: 'Martel', serif;
+    font-weight: 400;
+
 }
 
 .container{
     width: 1440px;
-    height: 960px;
     background-color: #f1e9be;
     padding: 20px;
     box-sizing: content-box;
