@@ -24,9 +24,9 @@ p{
 .miolo{
     height: 100%;
     border-style: double;
-    border-width: 20px;
+    border-width: 60px;
     box-sizing: border-box;
-    border-image: url('border.png')  30 round;
+    border-image: url('border2.png')  100 round;
     text-align: center;
 
 }
