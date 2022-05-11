@@ -11,6 +11,12 @@ p{
     font-size: 20px;
 }
 
+.flex-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 .div-assinatura{
     padding:35px
 }
