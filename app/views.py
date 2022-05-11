@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from ninja import Router
 from app.models.atleta import Atleta
-from app.models.escola import Escola
-from app.models.professor import Professor
+# from app.models.escola import Escola
+# from app.models.professor import Professor
 
 router = Router()
 
@@ -29,12 +29,27 @@ def validate(request):
                 return render(request, 'validateQRCode/index.html',{"atleta":atleta})
             else:
                 return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
-        elif tipo == "escola":
-            return render(request, 'validateQRCode/index.html')
-        elif tipo == "professor":
-            return render(request, 'validateQRCode/index.html')
+        # elif tipo == "escola":
+        #     try:
+        #         escola = Escola.objects.get(id=id)
+        #     except Escola.DoesNotExist:
+        #         escola = None
+        #     if escola:
+        #         return render(request, 'validateQRCode/index.html',{"escola":escola})
+        #     else:
+        #         return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
+        # elif tipo == "professor":
+        #     try:
+        #         professor = Professor.objects.get(id=id)
+        #     except Professor.DoesNotExist:
+        #         professor = None
+        #     if professor:
+        #         return render(request, 'validateQRCode/index.html',{"professor":professor})
+        #     else:
+        #         return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
         else:
             return render(request,'validateQRCode/not_found.html')
+            
     except Exception as e:
         print(e)
         return str(e)
