@@ -20,7 +20,7 @@ class Estilo(models.Model):
     )
 
     nome = models.CharField(max_length=255)
-    caregoria = models.CharField(max_length=50, choices=CATEGORIA_TIPO)
+    categoria = models.CharField(max_length=50, choices=CATEGORIA_TIPO)
     regiao = models.CharField(max_length=50, choices=REGIAO_ORIGEM)
 
     criado_em = models.DateTimeField(auto_now_add=True)
