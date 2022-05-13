@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="alvara.css">
+    <link rel="stylesheet" href="static/alvara.css">
 </head>
 <body>
     <div class="container">
         <div class="miolo">
-            <div><img src="logo.png" width="275px"></div>
+            <div><img src="static/images/logo.png" width="275px"></div>
             <h1 class="alvara">ALVARÁ</h1>
             <p>O presidente da federação paranaense de kung fu wushu (FPRKW) no uso dos<br> atributos que lhe
-                 conferem autoriza o SR(A) <b>Antonio Willian Souza</b>,<br> portador do RG 56343434 SSP/SP, a ministrar
-                 aulas de Kung Fu / wushu<br> nos estilos Louva-a-Deus e Shaolin do Norte.
+                 conferem autoriza o SR(A) <b>{{ nome_professor }}</b>,<br> portador do RG {{rg}} SSP/SP, a ministrar
+                 aulas de Kung Fu / wushu<br> nos estilos 
+                {{ estilos }}.
             </p> 
             <div class = "flex-container">
                 <span><div style="width:200px"></div></span>
@@ -28,7 +30,7 @@
                     <div style="padding:25px"><b> Aldebran Valentim </b><br>
                     Presidente da Federação Paranaense de <br>Kung Fu Wushu</div>
                 </span>
-                <span><img src="www.png" width="200px"></span>
+                <span><img src="static/images/www.png" width="200px"></span>
             </div>
         </div>
 

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;400&display=swap%27');
+
+body{
+    color: rgb(119, 65, 46);
+    font-family: 'Martel', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p{
+    margin: 0;
+    font-size: 20px;
+}
+
+.flex-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.div-assinatura{
+    padding:35px
+}
+
+.miolo{
+    height: 100%;
+    border-style: double;
+    border-width: 60px;
+    box-sizing: border-box;
+    border-image: url('/static/images/border2.png')  100 round;
+    text-align: center;
+
+}
+
+.alvara{
+    margin: 0;
+    font-size: 100px;
+    font-family: 'Martel', serif;
+    font-weight: 400;
+
+}
+
+.container{
+    width: 1440px;
+    background-color: #f1e9be;
+    padding: 20px;
+    box-sizing: content-box;
+
+}
+
+
+

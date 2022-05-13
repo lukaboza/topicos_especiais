@@ -1,5 +1,5 @@
 from django.db import models
-from app.models import responsavel_atleta
+
 
 from app.models.responsavel_atleta import ResponsavelAtleta
 
