@@ -1,7 +1,1 @@
-asgiref==3.5.0
-Django==4.0.4
-sqlparse==0.4.2
-gunicorn
-django-ninja==0.17.0
-psycopg2-binary==2.9.3
-django-environ==0.8.1
+-r requirements/prod.txt
