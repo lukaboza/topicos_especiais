@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from ninja import Router
 from app.models.atleta import Atleta
-from app.models.escola import Escola
-from app.models.professor import Professor
+# from app.models.escola import Escola
+# from app.models.professor import Professor
 
 router = Router()
 
@@ -23,18 +23,29 @@ def validate(request):
         if tipo == "atleta":
             try:
                 atleta = Atleta.objects.get(id=id)
+                return render(request, 'validateQRCode/index.html',{"atleta":atleta,"tipo":tipo})
             except Atleta.DoesNotExist:
                 atleta = None
-            if atleta:
-                return render(request, 'validateQRCode/index.html',{"atleta":atleta})
-            else:
                 return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
-        elif tipo == "escola":
-            return render(request, 'validateQRCode/index.html')
-        elif tipo == "professor":
-            return render(request, 'validateQRCode/index.html')
+
+        # elif tipo == "escola":
+        #     try:
+        #         escola = Escola.objects.get(id=id)
+        #         return render(request, 'validateQRCode/index.html',{"escola":escola, "tipo":tipo})
+        #     except Escola.DoesNotExist:
+        #         escola = None
+        #         return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
+
+        # elif tipo == "professor":
+        #     try:
+        #         professor = Professor.objects.get(id=id)
+        #         return render(request, 'validateQRCode/index.html',{"professor":professor, "tipo":tipo})
+        #     except Professor.DoesNotExist:
+        #         professor = None
+        #         return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
+
         else:
-            return render(request,'validateQRCode/not_found.html')
+            return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
     except Exception as e:
         print(e)
         return str(e)
