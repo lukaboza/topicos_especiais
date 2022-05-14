@@ -17,12 +17,14 @@ def format_estilos(estilos):
 
     return estilos_str
 
+
 @router.get('/')
 def index(request):
     return render(request, 'index.html')
 
 @router.get('/alvara')
 def alvara(request):
+    
     payload = {
         "nome_professor" : "Antonio",
         "rg" : "8.306.117.0",
