@@ -31,7 +31,7 @@ def alvara(request):
         "orgao_emissor" : "SSP/SP",
         "estilos" : format_estilos(["Louva-a-Deus", "Shaolin-do-Norte"]),
         "validade" : "30/08/1993",
-        "cidade" : "Curitiba",
+        "cidade" : "Londrina",
         "data_do_mes" : "08",
         "ano" : "2022"
     }
