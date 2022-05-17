@@ -2,6 +2,7 @@ from django.shortcuts import render
 from ninja import Router
 from app.models.atleta import Atleta
 from app.models.escola import Escola
+from app.models.estilo import Estilo
 # from app.models.professor import Professor
 
 router = Router()
@@ -27,6 +28,24 @@ def create_atleta(request, escola_id: int):
     atleta.save()
 
     return request.POST
+
+@router.get('/estilos')
+def form_estilo(request):
+
+    return render(request, 'estilos/form.html')
+
+@router.post('/estilos')
+def create_estilo(request):
+
+    estilo = Estilo(
+        nome=request.POST['nome'],
+        categoria=request.POST['categoria'],
+        regiao=request.POST['regiao']
+    )
+    estilo.save()
+
+    return request.POST
+
 
 
 @router.get('/validacao')
