@@ -28,7 +28,8 @@ def create_atleta(request, escola_id: int):
 
     return request.POST
 
-@router.get('/validate')
+
+@router.get('/validacao')
 def validate(request):
     try:
         id = request.GET.get('id', None)
@@ -46,13 +47,13 @@ def validate(request):
                 atleta = None
                 return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
 
-        # elif tipo == "escola":
-        #     try:
-        #         escola = Escola.objects.get(id=id)
-        #         return render(request, 'validateQRCode/index.html',{"escola":escola, "tipo":tipo})
-        #     except Escola.DoesNotExist:
-        #         escola = None
-        #         return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
+        elif tipo == "escola":
+            try:
+                escola = Escola.objects.get(id=id)
+                return render(request, 'validateQRCode/index.html',{"escola":escola, "tipo":tipo})
+            except Escola.DoesNotExist:
+                escola = None
+                return render(request, 'validateQRCode/not_found.html',{"tipo":tipo})
 
         # elif tipo == "professor":
         #     try:

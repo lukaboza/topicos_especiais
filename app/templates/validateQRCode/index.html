@@ -15,15 +15,23 @@
         <p>RG: {{atleta.rg}}</p>
         <p>CPF: {{atleta.cpf}}</p>
         <p>Email: {{atleta.email}}</p>
+        <p>Data de Nascimento: {{atleta.data_nascimento}}</p>
+        <p>Facebook: {{atleta.facebook}}</p>
+        <p>Telefone: {{atleta.telefone}}</p>
+        <p>Celular: {{atleta.celular}}</p>
+        <p>Email: {{atleta.email}}</p>
+        <p>Código: {{atleta.codigo}}</p>
+        <p>Federação: {{atleta.federacao}}</p>
+        <p>Responsável pelo atleta: {{atleta.responsavel_atleta}}</p>
+        <p>Criado em: {{atleta.criado_em}}</p>
+        <p>Atualizado em: {{atleta.atualizado_em}}</p>
     {% endif %}
     {% if tipo == "escola" %}
         <h1>Escola</h1>
         <p>Nome: {{escola.nome}}</p>
-        <p>Cidade de atuação: </p>
-        <p>Representante: </p>
-        <p>Telefone: </p>
-        <p>Email: </p>
-        <p>Estilos: </p>
+        <p>Federação: {{escola.federacao}}</p>
+        <p>Criado em: {{atleta.criado_em}}</p>
+        <p>Atualizado em: {{atleta.atualizado_em}}</p>
     {% endif %}
     {% if tipo == "professor" %}
         <h1>Professor</h1>
