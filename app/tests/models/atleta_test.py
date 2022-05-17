@@ -1,18 +1,24 @@
 from django.test import TestCase
 
 from app.tests.factories.atleta_factory import AtletaFactory
+from app.tests.factories.federacao_factory import FederacaoFactory
 
 class AtletaModelTest(TestCase):
     def test_generate_code_on_create(self):
-        atleta = AtletaFactory()
+        federacao = FederacaoFactory()
+        federacao.save()
+        atleta = AtletaFactory(federacao=federacao)
         atleta.save()
 
         self.assertEqual(atleta.codigo, 1)
 
     def test_generate_code_when_has_many_atleta(self):
-        AtletaFactory().save()
+        federacao = FederacaoFactory()
+        federacao.save()
 
-        atleta = AtletaFactory()
+        AtletaFactory(federacao=federacao).save()
+
+        atleta = AtletaFactory(federacao=federacao)
         atleta.save()
 
         self.assertEqual(atleta.codigo, 2)
