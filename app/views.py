@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from ninja import Router
+from app.models.professor import Professor
 
 router = Router()
 
 def format_estilos(estilos):
     estilos_str = ""
     estilos_len = len(estilos)
-
+    
     for idx, estilo in enumerate(estilos):
         if idx < estilos_len - 2:
             estilos_str += estilo + ", "
@@ -24,7 +25,7 @@ def index(request):
 
 @router.get('/alvara')
 def alvara(request):
-    
+    professor = Professor(_id = 1)
     payload = {
         "nome_professor" : "Antonio",
         "rg" : "8.306.117.0",

@@ -2,7 +2,7 @@ from django.db import models
 
 class Federacao(models.Model):
     class Meta:
-        db_table = 'escola'
+        db_table = 'federacao'
 
     nome_fantasia = models.CharField(max_length=255)
     razao_social = models.CharField(max_length=255)
